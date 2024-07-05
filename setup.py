@@ -1,0 +1,27 @@
+import setuptools
+
+with open("README.md", "r") as fh:
+
+    long_description = fh.read()
+
+setuptools.setup(
+    name="litebase",
+    version=open('version').read().strip(),
+    author="Victor Martins",
+    author_email="victor.martins.dpaula@gmail.com",
+    description="All in one python backend",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.12',
+    install_requires=open('requirements.txt').read().splitlines(),
+    entry_points={
+        'console_scripts': [
+            'litebase = litebase.cli:main',
+        ],
+    },
+)
