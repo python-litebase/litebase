@@ -9,6 +9,8 @@ with open('requirements.txt', 'r') as fh:
 
     requirements = fh.read().splitlines()
 
+print(os.getenv('VERSION'))
+
 setuptools.setup(
     name='litebase',
     version=os.getenv('VERSION'),
