@@ -1,3 +1,4 @@
+import os
 import setuptools
 
 with open('README.md', 'r') as fh:
@@ -10,7 +11,7 @@ with open('requirements.txt', 'r') as fh:
 
 setuptools.setup(
     name='litebase',
-    version='0.0.2',
+    version=os.getenv('VERSION').replace('refs/tags/', ''),
     author='Victor Martins',
     author_email='victor.martins.dpaula@gmail.com',
     description='All in one python backend',
