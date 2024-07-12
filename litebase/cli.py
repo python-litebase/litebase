@@ -12,7 +12,7 @@ def main(ctx, debug):
     ctx.obj['debug'] = debug
 
 @main.command()
-@click.pass_context
+@click.pass_context 
 def serve(ctx):
     """
     Start the Litebase server
