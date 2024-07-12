@@ -1,8 +1,8 @@
 import click
 
 # Register routes and sockets
-from litebase.core.flask import serve as _serve
-from litebase.core.api import *
+from litebase import app
+
 
 @click.group()
 @click.option('--debug/--no-debug', default=False, is_flag=True, help='Enable or disable debug mode.')
@@ -25,6 +25,4 @@ def serve(ctx):
     click.echo('Starting Litebase server...')
 
     # Starts the server
-    _serve(
-        debug=ctx.obj['debug'],
-    )
+    app.run(debug=ctx.obj['debug'])
