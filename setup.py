@@ -11,7 +11,7 @@ with open('requirements.txt', 'r') as fh:
 
 setuptools.setup(
     name='litebase',
-    version=os.getenv('VERSION').replace('refs/tags/', ''),
+    version=os.getenv('VERSION'),
     author='Victor Martins',
     author_email='victor.martins.dpaula@gmail.com',
     description='All in one python backend',
