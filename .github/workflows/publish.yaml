@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest      
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
       with:
@@ -42,6 +42,7 @@ jobs:
 
   publish-to-pypi:
     runs-on: ubuntu-latest
+    if: github.ref_type == 'tag'
     needs: 
     - build
     environment:
