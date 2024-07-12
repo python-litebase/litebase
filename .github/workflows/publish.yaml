@@ -15,9 +15,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    env:
-      VERSION: ${{ github.ref }}
+    runs-on: ubuntu-latest      
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python 3.12
@@ -32,7 +30,7 @@ jobs:
         python -m pip install -r requirements.txt
 
     - name: Build package
-      run: python -m build
+      run: VERSION=$(git describe --tags --abbrev=0) python -m build
 
     - name: Store the distribution packages
       uses: actions/upload-artifact@v3
