@@ -10,7 +10,7 @@ with open('requirements.txt', 'r') as fh:
 
 setuptools.setup(
     name='litebase',
-    version='0.0.1',
+    version='0.0.2',
     author='Victor Martins',
     author_email='victor.martins.dpaula@gmail.com',
     description='All in one python backend',
