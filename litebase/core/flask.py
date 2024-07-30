@@ -45,4 +45,4 @@ def serve(debug=False, *args, **kwargs) -> None:
 
         db.create_all()
 
-    socketio.run(app, debug=debug)
+    socketio.run(app, debug=debug, *args, **kwargs)
